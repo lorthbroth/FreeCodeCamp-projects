@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Markdown technical Document</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>Markdown Documentation</header>
+        <ul>
+            <li>
+                <a href="#Introduction" class="nav-link">Introduction</a>
+            </li>
+            <li>
+                <a href="#History" class="nav-link">Hiostory</a>
+            </li>
+            <li>
+                <a href="#Standardization" class="nav-link">Standardization</a>
+            </li>
+            <li>
+                <a href="#CommonMark" class="nav_link">CommonMark</a>
+            </li>
+            <li>
+            <a href="#GFM" class="nav-link">GFM</a>
+            </li>
+            <li>
+                <a href="#Markdown_Extra" class="nav-link">Markdown Extra</a>
+            </li>
+            <li>
+                <a href="#Example" class="nav-link">Example</a>
+            </li>
+            <li>
+                <a href="#Implementation" class="nav-link">Implementation</a>
+            </li>
+            <li>
+                <a href="#Reference" class="nav-link">Reference</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header>Introduction</header>
+            <article>
+                <p>Markdown is a lightweight markup language with plain text formatting syntax. Its design allows it to be converted to many output formats, but the original tool by the same name only supports HTML. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.</p>
+
+                        <p>Since the initial description of Markdown contained ambiguities and unanswered questions, the implementations that appeared over the years have subtle differences and many come with syntax extensions</p>
+            </article>
+        </section>
+        <section class="main-section" id="History">
+            <header>History</header>
+            <article>
+                <p>
+                        John Gruber created the Markdown language in 2004 in collaboration with Aaron Swartz on the syntax, with the goal of enabling people "to write using an easy-to-read and easy-to-write plain text format, optionally convert it to structurally valid XHTML (or HTML)".
+                        <br><br>
+                        Its key design goal is readability – that the language be readable as-is, without looking like it has been marked up with tags or formatting instructions, unlike text formatted with a markup language, such as Rich Text Format (RTF) or HTML, which have obvious tags and formatting instructions. To this end, its main inspiration is the existing conventions for marking up plain text in email, though it also draws from earlier markup languages, notably setext, Textile, and reStructuredText.
+                        <br><br>
+                        Gruber wrote a Perl script, Markdown.pl, which converts marked-up text input to valid, well-formed XHTML or HTML and replaces angle brackets '<' '>' and ampersands '&' with their corresponding character entity references. It can be used as a standalone script, as a plugin for Blosxom or Movable Type, or as a text filter for BBEdit.
+                        <br><br>
+                        Markdown has since been re-implemented by others e.g. in a Perl module available on CPAN (Text::Markdown), and in a variety of other programming languages.  It is distributed under a BSD-style license and is included with, or available as a plugin for, several content-management systems.
+                        <br><br>
+                        Sites like <a href="#">GitHub</a>, <a href="#">Bitbucket</a>, <a href="#">Reddit</a>, <a href="#">Diaspora</a>, Stack Exchange, OpenStreetMap, and SourceForge use variants of Markdown to facilitate discussion between users.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Standardization">
+            <header>Standardization</header>
+            <article>
+                <p>
+                    Markdown has been characterised by an informal specification and a reference implementation for conversion to HTML. Over time, many Markdown implementations have appeared. People developed these mostly driven by the need for additional features on top of the base syntax—such as tables, footnotes, definition lists (technically HTML description lists), and Markdown inside HTML blocks. The behavior of some of these diverges from the reference implementation. At the same time, a number of ambiguities in the informal specification have attracted attention. These issues spurred an effort by some developers of Markdown parsers for standardisation.
+                    <br><br>
+                    Babelmark is a tool available to "[compare] the output of various implementations" to "promote discussion of how and whether certain vague aspects of the markdown spec should be clarified."Gruber has argued that complete standardization would be mistaken: "Different sites (and people) have different needs. No one syntax would make all happy."
+                    <br><br>
+                    In March 2016 RFC 7763 and RFC 7764 were published. RFC 7763 introduced MIME type text/markdown with the original variant. RFC 7764 discusses and registered the variants MultiMarkdown, GitHub Flavored Markdown (GFM), Pandoc, CommonMark, and Markdown Extra among others.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="CommonMark">
+            <header>CommonMark</header>
+            <article>
+                <p>
+                        From 2012, a group of people including Jeff Atwood and John MacFarlane launched what Atwood characterized as a standardization effort. A community website now aims to "document various tools and resources available to document authors and developers, as well as implementors of the various markdown implementations". In September 2014, Gruber objected to the usage of "Markdown" in the name of this effort and it was rebranded as a new dialect named CommonMark. CommonMark.org published several versions of a specification, reference implementation, and test suite, and "[plans] to announce a finalized 1.0 spec and test suite in 2019."
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="GFM">
+            <header>GFM</header>
+            <article>
+                <p>
+                        In 2017, GitHub released a formal specification of their GitHub Flavored Markdown (GFM) that is based on CommonMark. It follows the CommonMark specification exactly except for tables, strikethrough, autolinks and task lists, which the GitHub spec has added as extensions. GitHub also changed the parser used on their sites accordingly, which required that some documents be changed — for instance, GFM now requires that the hash symbol that creates a heading is separated by a space character.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Markdown_Extra">
+            <header>Markdown Extra</header>
+            <article>
+                <p>
+                        Markdown Extra is a lightweight markup language based on Markdown implemented in PHP (originally), Python and Ruby. It adds features not available with plain Markdown syntax. Markdown Extra is supported in content management systems, for example Drupal, TYPO3 and MediaWiki.
+            </p>
+            <p>It adds the following features to Markdown:
+                <ul>
+                    <li>markdown markup inside HTML blocks</li>
+                    <li>elements with id/class attribute</li>
+                    <li>fenced code blocks</li>
+                    <li>tables</li>
+                    <li>defination lists</li>
+                    <li>footnotes</li>
+                    <li>abbriviations</li>
+                </ul>
+            </p>
+        </article>
+        </section>
+        <section class="main-section" id="Example">
+            <header>Example</header>
+            <div class="examples" id="markup_example">
+                <div class="level">Text using Markdown syntax</div>
+                <code>
+                    <p>Heading</p>
+                    <p>=======</p>
+                    <p>## Sub-heading</p>
+                    <p>Paragraphs are separated
+                            by a blank line.</p>
+                    <p>Two spaces at the end of a line produces a line brake.</p>
+                    <p>Text attributes <em>_italic_</em>, <strong>**bold**</strong>, <code>'monospace'</code></p>
+                    <p>Horizontal rule:</p>
+                    <p>---</p>
+                    <p>Bullet list:
+                        <p><span class="k">*</span>apples</p>
+                        <p><span class="k">*</span>oranges</p>
+                        <p>
+                            <span class="k">*
+                            </span>pears
+                        </p>
+                    </p>
+                    <p>
+                        Numbered list:
+                        <p><span class="k">1.</span> lather</p>
+                        <p><span class="k">2.</span> rinse</p>
+                        <p><span class="k">3.</span> repeat</p>
+                    </p>
+                <p>An [<a href="#">example</a>](http://example.com)</p>
+                <p>![<a href="#">Image</a>](Icon-pictures.png "icon")</p>
+                <p>> <em>Markdown uses email-style ></em><br><em>characters fopr blockquoting.</em></p>
+                <p>Inline <abbr title="Hypertext Markup language"HTML</abbr> is supported.</abbr></p>
+                </code>
+            </div>
+            <div class="examples" id="html_example">
+                <div class="level">Corresponding HTML produced by a Markdown processor</div>
+            <code>
+                    <p><span>< h1></span>
+                        Heading <span>< /h1></span>
+                    </p>
+                    <p>
+                    <span>< h2></span>
+                    Sub-heading <span>< /h2></span>
+                    </p>
+                    <p>
+                        <span>< p></span>
+                    Paragraphs are separated
+                    by a blank line. <span>< /p></span>
+                    </p>
+                    
+                    <p>
+                        <span>< p></span> spaces at the end of a line
+                        <span>< br></span>
+                    produces a line break.
+                    <span>< /p></span>
+                </p>
+                    
+                    <p>
+                            <span> < p></span>
+                                Text attributes <span>< em></span>
+                                    italic
+                                <span>< /em></span>, 
+                                <span>< strong></span>
+                                    bold
+                                <span>< /strong></span>, <span>< code></span>
+                                    monospace
+                                <span>< /code></span>
+                                . <span>< /p></span>
+                    </p>
+                    
+                    <p>Horizontal rule:</p>
+                    
+                    <p><span>< hr /></span></p>
+                    
+                    <p>
+                            <span >< p></span>Bullet list: <span>< /p></span></p>
+                    
+                    <p>
+                        <span>< ul></span>
+                    </p>
+                    <p><span>< li></span>apples <span>< /li></span> </p>
+                    <p><span>< li></span>oranges <span>< /li></span> </p>
+                    <p><span>< li></span>pears <span>< /li></span> 
+                    <p><span>< /ul></span></p>
+                    </p>
+                    
+                    <p>
+                        <span >< p></span>Numbered list: <span>< /p></span></p>
+                    
+                    <p>
+                            <span>< ol></span>
+                        </p>
+                        <p><span>< li></span>lather <span>< /li></span> </p>
+                        <p><span>< li></span>rinse <span>< /li></span> </p>
+                        <p><span>< li></span>repeat <span>< /li></span> 
+                        <p><span>< /ol></span></p>
+                        </p>
+                    
+                    <p>
+                        <span>< p></span>
+                        An <span>< a</span> href="http://example.com">example <span>< /a> < /p>.</span> </p>
+                    
+                    <p>
+                       <span>< p> < img</span> alt="Image" title="icon" src="Icon-pictures.png" <span>/>< /p></span>
+                    </p>
+                    <p><span>< blockquote></blockquote></span></p>
+                    
+                    <p>
+                        <span>< p></span> uses email-style <span>& gt;</span> characters for blockquoting. <span>< /p></span>
+                    </p>
+                    <p><span>< /blockquote></span></p>
+                    <p>
+                        <span>< abbr</span>  title="Hypertext Markup Language"<span>></ abbr></span> is supported. <span>< /p></span>
+                    </p>
+
+            </code>
+            </div>
+            <div class="examples" id="view">
+                <div class="level">Text viewed in a browser</div>
+               
+                <h1>Heading</h1>
+
+                <h2>Sub-heading</h2>
+                
+                <p>Paragraphs are separated
+                by a blank line.</p>
+                
+                <p>Two spaces at the end of a line<br />
+                produces a line break.</p>
+                
+                <p>Text attributes <em>italic</em>, 
+                <strong>bold</strong>, <code>monospace</code>.</p>
+                
+                <p>Horizontal rule:</p>
+                
+                <hr />
+                
+                <p>Bullet list:</p>
+                
+                <ul>
+                <li>apples</li>
+                <li>oranges</li>
+                <li>pears</li>
+                </ul>
+                
+                <p>Numbered list:</p>
+                
+                <ol>
+                <li>lather</li>
+                <li>rinse</li>
+                <li>repeat</li>
+                </ol>
+                
+                <p>An <a href="http://example.com">example</a>.</p>
+                
+                <p><img alt="Image" title="icon" src="Icon-pictures.png" /></p>
+                
+                <blockquote>
+                <p>Markdown uses email-style &gt; characters for blockquoting.</p>
+                </blockquote>
+                
+                <p>Inline <abbr title="Hypertext Markup Language">HTML</abbr> is supported.</p>
+            </div>
+        </section>
+        <section class="main-section" id="Implementations">
+            <header>Implementations</header>
+            <article>
+                <p>Implementations of Markdown are available for over a dozen programming languages; in addition, many platforms and frameworks support Markdown.[38] For example, Markdown plugins exist for every major blogging platform</p>
+                <p>While Markdown is a minimal markup language and is read and edited with a normal text editor, there are specially designed editors that preview the files with styles, which are available for all major platforms. Many general purpose text and code editors have syntax highlighting plugins for Markdown built into them or available as optional download. Editors may feature a side-by-side preview window or render the code directly in a WYSIWYG fashion.</p>
+                <p>
+                    <ul>
+                        <li>The sourcecode documentation generator Doxygen supports Markdown with extra features.</li>
+                        <li>RStudio, an IDE for R, provides a C++ wrapper function for a markdown variant called sundown.</li>
+                        <li>GitHub Flavored Markdown (GFM) ignores underscores in words, and adds syntax highlighting, task lists, and tables</li>
+                        <li>Discount – a C implementation.</li>
+                        <li>MarkAPL is a converter written in Dyalog APL. It supports fenced blocks, smart typography, link references, and special attributes, and can generate a table of contents.</li>
+                        <li>PHP Markdown - a library package that includes the PHP Markdown parser and its sibling PHP Markdown Extra with additional features.</li>
+                        <li>Markdig – A .NET library that follows the CommonMark specifications, and includes a collection of extensions and the ability for the user to create their own.</li>
+                    </ul>
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+                <ul>
+                    <li>All the documentation in this is taken from <a href="https://en.wikipedia.org/wiki/Markdown">Wikipedia</a></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+   
+</body>
+
+
+</html>
